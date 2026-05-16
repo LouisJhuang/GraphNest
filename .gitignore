@@ -1,23 +1,23 @@
 HELP.md
 /target/
+**/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
 
-### JetBrains IntelliJ IDEA ###
-.idea
+### JetBrains IntelliJ IDEA & Rider ###
+**/.idea/
+.idea/
 *.iws
 *.iml
 *.ipr
-
-### JetBrains Rider ###
-.idea/
 *.sln.iml
 *.DotSettings.user
+**/.vs/
 .vs/
 
 ### VS Code ###
-.vscode/*
+**/.vscode/
 
 ### Eclipse ###
 *.settings
