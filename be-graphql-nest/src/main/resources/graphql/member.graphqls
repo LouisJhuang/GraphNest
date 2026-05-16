@@ -1,0 +1,45 @@
+type Query {
+    member(id: ID!): Member
+    members: [Member!]!
+}
+
+type Mutation {
+    createMember(input: CreateMemberInput!): Member!
+    updateMemberStatus(id: ID!, status: MemberStatus!): Member!
+}
+
+type Member {
+    id: ID!
+    username: String!
+    email: String!
+    displayName: String
+    status: MemberStatus!
+    profile: MemberProfile
+    orders: [Order!]!
+}
+
+type MemberProfile {
+    memberId: ID!
+    phone: String
+    address: String
+    birthday: String
+}
+
+type Order {
+    id: ID!
+    memberId: ID!
+    productName: String!
+    amount: Int!
+}
+
+input CreateMemberInput {
+    username: String!
+    email: String!
+    displayName: String
+}
+
+enum MemberStatus {
+    ACTIVE
+    INACTIVE
+    LOCKED
+}

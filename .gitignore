@@ -1,0 +1,61 @@
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### JetBrains IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### JetBrains Rider ###
+.idea/
+*.sln.iml
+*.DotSettings.user
+.vs/
+
+### VS Code ###
+.vscode/*
+
+### Eclipse ###
+*.settings
+*.mvn
+*.tmp
+*.bak
+*.swp
+*~.nib
+.project
+.metadata
+/target/
+/logs/
+/bin/
+/tmp/
+
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+!**/src/main/**/build/
+!**/src/test/**/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+/nbbuild/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache

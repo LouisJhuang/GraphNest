@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: be-graphql-nest
+    graphql:
+        graphiql:
+            enabled: true
+        schema:
+            printer:
+                enabled: true
