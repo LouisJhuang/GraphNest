@@ -1,0 +1,15 @@
+# Order-related queries.
+extend type Query {
+    order(id: ID!): Order
+    ordersByMember(memberId: ID!): [Order!]!
+}
+
+"""
+Order data returned by GraphQL.
+"""
+type Order {
+    id: ID!
+    memberId: ID!
+    productName: String!
+    amount: Int!
+}

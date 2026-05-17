@@ -1,0 +1,6 @@
+# Root GraphQL entry points.
+# Query: used for reading data.
+# Mutation: used for creating, updating, or deleting data.
+
+type Query
+type Mutation

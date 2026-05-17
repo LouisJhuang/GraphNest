@@ -1,13 +1,18 @@
-type Query {
+# Member-related queries.
+extend type Query {
     member(id: ID!): Member
     members: [Member!]!
 }
 
-type Mutation {
+# Member-related mutations.
+extend type Mutation {
     createMember(input: CreateMemberInput!): Member!
     updateMemberStatus(id: ID!, status: MemberStatus!): Member!
 }
 
+"""
+Member data returned by GraphQL.
+"""
 type Member {
     id: ID!
     username: String!
@@ -18,6 +23,9 @@ type Member {
     orders: [Order!]!
 }
 
+"""
+Additional profile information for a member.
+"""
 type MemberProfile {
     memberId: ID!
     phone: String
@@ -25,19 +33,18 @@ type MemberProfile {
     birthday: String
 }
 
-type Order {
-    id: ID!
-    memberId: ID!
-    productName: String!
-    amount: Int!
-}
-
+"""
+Input data for creating a member.
+"""
 input CreateMemberInput {
     username: String!
     email: String!
     displayName: String
 }
 
+"""
+Available member statuses.
+"""
 enum MemberStatus {
     ACTIVE
     INACTIVE
