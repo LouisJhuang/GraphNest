@@ -28,7 +28,7 @@ public class MemberGraphQLController {
             MemberProfileService memberProfileService,
             OrderService orderService) {
         this.memberService = memberService;
-        this.memberProfileService = null;
+        this.memberProfileService = memberProfileService;
         this.orderService = orderService;
     }
 
@@ -44,7 +44,7 @@ public class MemberGraphQLController {
 
     @MutationMapping
     public Member createMember(@Argument CreateMemberInput input) {
-        return null;
+        return memberService.create(input);
     }
 
     @MutationMapping
