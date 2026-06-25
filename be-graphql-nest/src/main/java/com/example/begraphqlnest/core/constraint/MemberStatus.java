@@ -1,7 +1,7 @@
 package com.example.begraphqlnest.core.constraint;
  
 public enum MemberStatus {
-    ACTIVEE,
+    ACTIVE,
     INACTIVE,
     LOCKED
 }
